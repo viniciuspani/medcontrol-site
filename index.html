@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MedControl — Controle de Medicamentos de Farmácia Especializada</title>
+  <meta name="description" content="App gratuito para quem retira medicamentos em farmácia especializada. Controle prazos de retirada, validade de receitas e documentos exigidos — para você ou para quem você cuida." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#3E7896" />
+  <meta name="author" content="MedControl" />
+  <link rel="canonical" href="https://medcontrol.tec.br/" />
+
+  <!-- Favicon e ícones -->
+  <link rel="icon" type="image/svg+xml" href="/assets/brand/logo-mark.svg" />
+  <link rel="apple-touch-icon" href="/assets/brand/app-icon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="MedControl" />
+  <meta property="og:title" content="MedControl — Controle de Medicamentos de Farmácia Especializada" />
+  <meta property="og:description" content="Saiba quando ir à farmácia, quais documentos levar e quando renovar sua receita. Tudo organizado num só lugar." />
+  <meta property="og:url" content="https://medcontrol.tec.br/" />
+  <meta property="og:image" content="https://medcontrol.tec.br/assets/og/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MedControl — Controle de Medicamentos de Farmácia Especializada" />
+  <meta name="twitter:description" content="App gratuito para nunca perder o prazo de retirada na farmácia especializada. Para você ou para quem você cuida." />
+  <meta name="twitter:image" content="https://medcontrol.tec.br/assets/og/og-image.png" />
+
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+
+  <!-- JSON-LD: MobileApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "MedControl",
+    "description": "Aplicativo gratuito para controle de medicamentos de farmácia especializada. Gerencie prazos de retirada, validade de receitas, exames e formulários exigidos, com suporte a múltiplos pacientes.",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Android",
+    "inLanguage": "pt-BR",
+    "softwareVersion": "1.0",
+    "url": "https://medcontrol.tec.br/",
+    "image": "https://medcontrol.tec.br/assets/brand/app-icon.svg",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "BRL"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "MedControl"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MedControl",
+    "url": "https://medcontrol.tec.br/",
+    "logo": "https://medcontrol.tec.br/assets/brand/logo-vertical.svg",
+    "email": "contato@medcontrol.tec.br",
+    "areaServed": "BR",
+    "slogan": "Seus prazos na farmácia especializada, sempre sob controle."
+  }
+  </script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="/" aria-label="MedControl - página inicial">
+      <img class="brand__mark" src="/assets/brand/logo-mark.svg" alt="" width="36" height="36" />
+      <span class="brand__wordmark">
+        <span class="w-med">Med</span><span class="w-control">Control</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-nav">
+      <span class="nav-toggle__bars" aria-hidden="true"></span>
+    </button>
+
+    <nav class="nav" id="primary-nav" data-nav data-open="false" aria-label="Principal">
+      <ul class="nav__list">
+        <li><a href="#recursos">Recursos</a></li>
+        <li><a href="#como-funciona">Como funciona</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="/privacidade/">Privacidade</a></li>
+        <li><a href="/privacidade/exclusao-de-conta.html">Excluir Conta</a></li>
+      </ul>
+      <a class="btn btn--primary nav__cta" href="#baixar" aria-disabled="true">
+        Baixar na Play Store
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- =========================================================
+       HERO
+       ========================================================= -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div>
+        <span class="eyebrow">Em breve na Play Store</span>
+        <h1 class="hero__title">
+          Nunca mais perca o prazo na <span class="accent">farmácia especializada</span>.
+        </h1>
+        <p class="hero__subtitle">
+          O MedControl avisa quando chegar a hora de buscar cada medicamento — e lembra quais documentos você precisa levar. Simples, gratuito e feito para quem não pode errar.
+        </p>
+
+        <div class="hero__ctas">
+          <a class="play-badge" href="#baixar" aria-disabled="true" aria-label="Baixar na Play Store (em breve)">
+            <!-- Ícone Play simples -->
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M3 2.5v19c0 .55.62.86 1.05.53l15.49-9.5a.66.66 0 0 0 0-1.07L4.05 1.97A.65.65 0 0 0 3 2.5Z"/>
+            </svg>
+            <span>
+              <span class="play-badge__small">Em breve no</span>
+              <span class="play-badge__big">Google Play</span>
+            </span>
+          </a>
+          <a class="btn btn--ghost" href="#como-funciona">Ver como funciona</a>
+        </div>
+
+        <div class="hero__trust" aria-label="Diferenciais do app">
+          <span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+            100% gratuito no lançamento
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+            Simples e direto ao ponto
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+            Nunca mais perca um prazo
+          </span>
+        </div>
+      </div>
+
+      <!-- Mockup placeholder -->
+      <!-- Substitua o div abaixo por <img src="/assets/images/hero-mockup.png" alt="Tela do app MedControl" /> -->
+      <div class="phone">
+        <img src="/assets/images/screen-login.jpeg" alt="Tela do app MedControl" />
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       RECURSOS
+       ========================================================= -->
+  <section class="section section--alt" id="recursos">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Recursos</span>
+        <h2>Tudo que você precisa para não perder nenhum prazo</h2>
+        <p>A farmácia especializada tem regras específicas: cada medicamento tem seu prazo, cada receita tem sua validade, cada exame precisa estar em dia. O MedControl organiza tudo isso por você — em alertas claros, no momento certo.</p>
+      </div>
+
+      <div class="features">
+        <article class="feature">
+          <span class="feature__icon" aria-hidden="true">
+            <!-- Pessoas -->
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M16 11a3 3 0 1 0-3-3 3 3 0 0 0 3 3Zm-8 0a3 3 0 1 0-3-3 3 3 0 0 0 3 3Zm0 2c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4Zm8 0c-.29 0-.62.02-.97.05A5.46 5.46 0 0 1 18 17v3h6v-3c0-2.66-5.33-4-8-4Z"/></svg>
+          </span>
+          <h3>Seu tratamento organizado</h3>
+          <p>Mantenha todos os seus medicamentos da farmácia especializada, prazos de retirada e documentos exigidos em um único perfil.</p>
+        </article>
+
+        <article class="feature">
+          <span class="feature__icon" aria-hidden="true">
+            <!-- Sino -->
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 22a2.5 2.5 0 0 0 2.5-2.5h-5A2.5 2.5 0 0 0 12 22Zm7-6V11a7 7 0 0 0-5-6.7V4a2 2 0 1 0-4 0v.3A7 7 0 0 0 5 11v5l-2 2v1h18v-1Z"/></svg>
+          </span>
+          <h3>Alertas de retirada</h3>
+          <p>Receba avisos antes do prazo de cada medicamento acabar. Vá à farmácia na hora certa, sem risco de ficar sem o remédio.</p>
+        </article>
+
+        <article class="feature">
+          <span class="feature__icon" aria-hidden="true">
+            <!-- Calendário -->
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 16H5V10h14ZM5 8V6h14v2Z"/></svg>
+          </span>
+          <h3>Calendário de prazos</h3>
+          <p>Visualize todos os prazos de retirada em um só painel. Saiba exatamente quando ir à farmácia para cada medicamento.</p>
+        </article>
+
+        <article class="feature">
+          <span class="feature__icon" aria-hidden="true">
+            <!-- Caixa -->
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2 2 7v10l10 5 10-5V7Zm0 2.18L19.18 8 12 11.82 4.82 8ZM4 9.91l7 3.5v7.34l-7-3.5Zm9 10.84v-7.34l7-3.5v7.34Z"/></svg>
+          </span>
+          <h3>Controle de receitas e formulários</h3>
+          <p>Acompanhe a validade das receitas médicas e dos formulários exigidos. Receba alerta quando estiver na hora de renovar.</p>
+        </article>
+
+        <article class="feature">
+          <span class="feature__icon" aria-hidden="true">
+            <!-- Prancheta médica -->
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M19 3h-4.18A3 3 0 0 0 12 1a3 3 0 0 0-2.82 2H5a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Zm-7 0a1 1 0 1 1-1 1 1 1 0 0 1 1-1Zm1 15h-2v-3H8v-2h3v-3h2v3h3v2h-3Z"/></svg>
+          </span>
+          <h3>Medicamentos da farmácia</h3>
+          <p>Registre quais medicamentos são fornecidos pela farmácia especializada, a periodicidade de dispensação e os documentos exigidos para cada um.</p>
+        </article>
+
+        <article class="feature">
+          <span class="feature__icon" aria-hidden="true">
+            <!-- Cadeado -->
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5Zm-3 8V7a3 3 0 1 1 6 0v3Z"/></svg>
+          </span>
+          <h3>Privacidade em primeiro lugar</h3>
+          <p>Seus dados são protegidos com autenticação e criptografia. Você decide o que compartilhar.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       COMO FUNCIONA
+       ========================================================= -->
+  <section class="section" id="como-funciona">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Como funciona</span>
+        <h2>Comece em 3 passos</h2>
+        <p>Sem complicação. Em poucos minutos seus prazos na farmácia estão organizados.</p>
+      </div>
+
+      <div class="steps">
+        <article class="step">
+          <span class="step__num">1</span>
+          <h3>Crie seu perfil</h3>
+          <p>Configure sua conta com seus dados e comece a adicionar os medicamentos do seu tratamento na farmácia especializada.</p>
+        </article>
+        <article class="step">
+          <span class="step__num">2</span>
+          <h3>Adicione seus medicamentos</h3>
+          <p>Informe o nome, onde é retirado e a periodicidade de dispensação. O app calcula os próximos prazos automaticamente.</p>
+        </article>
+        <article class="step">
+          <span class="step__num">3</span>
+          <h3>Receba alertas na hora certa</h3>
+          <p>O app avisa quando ir à farmácia e o que levar. Sem surpresas, sem burocracia na última hora.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SCREENSHOTS
+       ========================================================= -->
+  <section class="section section--alt" id="screenshots">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Por dentro do app</span>
+        <h2>Veja como é simples na prática</h2>
+        <p>Telas pensadas para serem claras, com letras grandes e fluxos diretos.</p>
+      </div>
+
+      <div class="shots">
+        <div class="shot"><img src="/assets/images/screen-home.jpeg" alt="Tela inicial do app MedControl" /></div>
+        <!-- <div class="shot" role="img" aria-label="Mockup tela inicial">Screenshot 1<br />(home)</div> -->
+        <div class="shot"><img src="/assets/images/screen-agenda.jpeg" alt="Calendário de prazos de retirada" /></div>
+        <!-- <div class="shot" role="img" aria-label="Mockup agenda diária">Screenshot 2<br />(agenda)</div> -->
+        <div class="shot"><img src="/assets/images/screen-medicamento.jpeg" alt="Cadastro de medicamento na farmácia especializada" /></div>
+        <!-- <div class="shot" role="img" aria-label="Mockup cadastro de medicamento">Screenshot 3<br />(medicamento)</div> -->
+        <div class="shot"><img src="/assets/images/screen-paciente.jpeg" alt="Ficha do paciente com prazos e documentos" /></div>
+        <!-- <div class="shot" role="img" aria-label="Mockup ficha do paciente">Screenshot 4<br />(paciente)</div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FAQ
+       ========================================================= -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Perguntas frequentes</span>
+        <h2>Tudo o que você quer saber</h2>
+        <p>Não encontrou sua resposta? Fale com a gente em <a href="mailto:contato@medcontrol.tec.br">contato@medcontrol.tec.br</a>.</p>
+      </div>
+
+      <div class="faq">
+        <div class="faq__item" data-open="false">
+          <button class="faq__q" aria-expanded="false" aria-controls="faq-1">É gratuito?</button>
+          <div class="faq__a" id="faq-1" aria-hidden="true">
+            <div class="faq__a__inner">
+              Sim. O MedControl é gratuito no lançamento. Caso recursos adicionais sejam oferecidos no futuro, as funcionalidades essenciais permanecerão sem custo.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__item" data-open="false">
+          <button class="faq__q" aria-expanded="false" aria-controls="faq-2">Meus dados estão seguros?</button>
+          <div class="faq__a" id="faq-2" aria-hidden="true">
+            <div class="faq__a__inner">
+              Sim. Utilizamos autenticação segura e armazenamento criptografado em servidores em conformidade com a LGPD. Você é o titular dos dados e pode solicitar exclusão a qualquer momento na <a href="/privacidade/">Política de Privacidade</a>.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__item" data-open="false">
+          <button class="faq__q" aria-expanded="false" aria-controls="faq-3">Funciona sem internet?</button>
+          <div class="faq__a" id="faq-3" aria-hidden="true">
+            <div class="faq__a__inner">
+              Os alertas e a visualização dos seus prazos funcionam normalmente sem conexão. A internet é necessária apenas para sincronização entre dispositivos e backup na nuvem.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__item" data-open="false">
+          <button class="faq__q" aria-expanded="false" aria-controls="faq-4">Para quem é o app?</button>
+          <div class="faq__a" id="faq-4" aria-hidden="true">
+            <div class="faq__a__inner">
+              O MedControl é para pacientes que retiram medicamentos em farmácia especializada e precisam controlar prazos de retirada, validade de receitas, exames e formulários exigidos. Cada conta gerencia um paciente.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__item" data-open="false">
+          <button class="faq__q" aria-expanded="false" aria-controls="faq-5">O app funciona para qualquer farmácia especializada?</button>
+          <div class="faq__a" id="faq-5" aria-hidden="true">
+            <div class="faq__a__inner">
+              Sim. O MedControl funciona para farmácias do Componente Especializado do SUS, farmácias de alto custo e outras que dispensam medicamentos com periodicidade controlada. As informações são cadastradas por você, conforme as regras da sua farmácia.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__item" data-open="false">
+          <button class="faq__q" aria-expanded="false" aria-controls="faq-6">Onde encontro a política de privacidade?</button>
+          <div class="faq__a" id="faq-6" aria-hidden="true">
+            <div class="faq__a__inner">
+              A política completa está disponível em <a href="https://privacidade.medcontrol.tec.br/">privacidade.medcontrol.tec.br</a>, acessível também pelo rodapé do site e dentro do aplicativo.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       CTA FINAL
+       ========================================================= -->
+  <section class="section" id="baixar">
+    <div class="container">
+      <div class="cta-banner">
+        <h2>Pronto para nunca mais perder um prazo na farmácia?</h2>
+        <p>Gratuito e sem complicação. Em minutos você já sabe quando buscar cada medicamento — e chega na farmácia com tudo certo.</p>
+        <div class="cta-banner__actions">
+          <a class="play-badge" href="#" aria-disabled="true" aria-label="Baixar na Play Store (em breve)">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M3 2.5v19c0 .55.62.86 1.05.53l15.49-9.5a.66.66 0 0 0 0-1.07L4.05 1.97A.65.65 0 0 0 3 2.5Z"/>
+            </svg>
+            <span>
+              <span class="play-badge__small">Em breve no</span>
+              <span class="play-badge__big">Google Play</span>
+            </span>
+          </a>
+          <a class="btn btn--white" href="#recursos">Ver recursos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="/" aria-label="MedControl">
+          <img class="brand__mark" src="/assets/brand/logo-mark.svg" alt="" width="36" height="36" />
+          <span class="brand__wordmark">
+            <span class="w-med">Med</span><span class="w-control">Control</span>
+          </span>
+        </a>
+        <p class="footer__tagline">Seu tratamento contínuo merece atenção contínua.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Produto</h4>
+        <ul>
+          <li><a href="#recursos">Recursos</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacidade/">Política de Privacidade</a></li>
+          <li><a href="/privacidade/termos.html">Termos de Uso</a></li>
+          <li><a href="/privacidade/exclusao-de-conta.html">Excluir Conta</a></li>
+          <li><a href="mailto:contato@medcontrol.tec.br">contato@medcontrol.tec.br</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__legal">
+      <span>&copy; <span data-year>2026</span> MedControl. Todos os direitos reservados.</span>
+      <span>App Android: <code>br.tec.medcontrol.app</code></span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/script.js" defer></script>
+</body>
+</html>

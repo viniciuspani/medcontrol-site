@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  MedControl - logo vertical (full).
+  Símbolo (cápsula) no topo, wordmark "MedControl" no meio,
+  tagline "Gestão Inteligente de Medicamentos" embaixo.
+  viewBox 512x640.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 640" width="512" height="640">
+  <defs>
+    <linearGradient id="capGradV" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3E7896" />
+      <stop offset="100%" stop-color="#7AB89A" />
+    </linearGradient>
+  </defs>
+
+  <!-- Símbolo: cápsula vertical centralizada em (256, 176), inclinada 8° -->
+  <g transform="translate(256 176) rotate(8)">
+    <rect x="-66" y="-132" width="132" height="264" rx="66" ry="66" fill="url(#capGradV)" />
+
+    <!-- Highlight glossy -->
+    <path d="M -48 -90 Q -54 -117 -24 -123"
+          fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="6"
+          stroke-linecap="round" />
+
+    <!-- Cruz médica (topo) -->
+    <g transform="translate(0 -60)">
+      <rect x="-10.5" y="-33" width="21" height="66" rx="4" ry="4" fill="#FFFFFF" />
+      <rect x="-33" y="-10.5" width="66" height="21" rx="4" ry="4" fill="#FFFFFF" />
+    </g>
+
+    <!-- Check (base) -->
+    <path d="M -27 57 L -6 81 L 33 39"
+          fill="none" stroke="#FFFFFF" stroke-width="15"
+          stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Wordmark "MedControl" - Med em brandBlue, Control em brandGreen -->
+  <text x="256" y="455" text-anchor="middle" font-family="sans-serif"
+        font-size="72" font-weight="800" letter-spacing="-2">
+    <tspan fill="#3E7896">Med</tspan><tspan fill="#7AB89A">Control</tspan>
+  </text>
+
+  <!-- Tagline -->
+  <text x="256" y="510" text-anchor="middle" font-family="sans-serif"
+        font-size="26" font-weight="500" fill="#6B7B85">
+    Gestão Inteligente de Medicamentos
+  </text>
+</svg>

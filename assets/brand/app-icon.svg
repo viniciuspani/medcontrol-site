@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  MedControl - app icon 1024x1024.
+  Fundo gradiente primaryDark -> primary, cápsula branca centralizada
+  com cruz + check em brandBlue para contraste.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1B6FA0" />
+      <stop offset="100%" stop-color="#0F4F75" />
+    </linearGradient>
+  </defs>
+
+  <!-- Fundo full-bleed -->
+  <rect x="0" y="0" width="1024" height="1024" fill="url(#bgGrad)" />
+
+  <!-- Cápsula branca, vertical, inclinada 8° -->
+  <g transform="translate(512 512) rotate(8)">
+    <rect x="-176" y="-352" width="352" height="704" rx="176" ry="176" fill="#FFFFFF" />
+
+    <!-- Highlight muito sutil -->
+    <path d="M -128 -240 Q -144 -312 -64 -328"
+          fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="16"
+          stroke-linecap="round" />
+
+    <!-- Cruz médica em brandBlue (topo) -->
+    <g transform="translate(0 -160)">
+      <rect x="-28" y="-88" width="56" height="176" rx="10" ry="10" fill="#3E7896" />
+      <rect x="-88" y="-28" width="176" height="56" rx="10" ry="10" fill="#3E7896" />
+    </g>
+
+    <!-- Check em brandBlue (base) -->
+    <path d="M -72 152 L -16 216 L 88 104"
+          fill="none" stroke="#3E7896" stroke-width="40"
+          stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

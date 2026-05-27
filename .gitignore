@@ -1,0 +1,39 @@
+# Claude / docs internos
+.claude/
+docs/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+
+# Editores / IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.history/
+
+# Logs e temporários
+*.log
+*.tmp
+*.bak
+
+# Variáveis de ambiente / segredos
+.env
+.env.local
+.env.*.local
+
+# Deploy / hospedagem
+.vercel
+.netlify
+.firebase/
+.cache/
+
+# Dependências (caso adicione build futuramente)
+node_modules/
+dist/
+build/
