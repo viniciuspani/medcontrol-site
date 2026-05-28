@@ -307,10 +307,17 @@ p { margin: 0 0 1em; }
     padding: 16px 24px 24px;
     gap: 8px;
     transform: translateY(-110%);
-    transition: transform 0.3s var(--ease);
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 0.3s var(--ease), visibility 0s linear 0.3s;
     box-shadow: var(--shadow-md);
   }
-  .nav[data-open="true"] { transform: translateY(0); }
+  .nav[data-open="true"] {
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: auto;
+    transition: transform 0.3s var(--ease), visibility 0s linear 0s;
+  }
   .nav__list { flex-direction: column; gap: 0; }
   .nav__list a { padding: 14px 12px; font-size: 1.05rem; }
   .nav__cta { margin: 12px 0 0; align-self: stretch; }
