@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecionando — MedControl</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      background: #f5f5f5;
+      color: #333;
+    }
+    a { color: #1B6FA0; }
+  </style>
+  <script>
+    const params = window.location.search;
+    const hash = window.location.hash;
+    window.location.replace('medcontrol://auth/callback' + params + hash);
+  </script>
+</head>
+<body>
+  <p>Abrindo o MedControl...</p>
+  <p>Se não abrir automaticamente, <a href="medcontrol://auth/callback">clique aqui</a>.</p>
+</body>
+</html>
