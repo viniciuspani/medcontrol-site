@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "br.tec.medcontrol.app",
+    "sha256_cert_fingerprints": ["EE:03:87:22:57:B6:00:CA:86:BC:EB:99:FE:11:4B:80:AF:D0:91:DA:9E:44:20:50:ED:A6:CD:C9:3B:65:D7:EE"]
+  }
+}]

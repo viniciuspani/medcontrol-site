@@ -24,6 +24,13 @@
     Permissions-Policy = "geolocation=(), camera=(), microphone=(), payment=()"
     Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' https://cdn.jsdelivr.net; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self' https://formsubmit.co; frame-ancestors 'none'"
 
+# App Links (Android Digital Asset Links)
+[[headers]]
+  for = "/.well-known/assetlinks.json"
+  [headers.values]
+    Content-Type = "application/json"
+    Access-Control-Allow-Origin = "*"
+
 # Cache longo para assets estáticos
 [[headers]]
   for = "/assets/*"
