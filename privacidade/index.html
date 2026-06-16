@@ -57,8 +57,8 @@
     <span class="legal__eyebrow">Documento legal</span>
     <h1>Política de Privacidade &mdash; MedControl</h1>
     <p class="legal__meta-card">
-      <strong>Última atualização:</strong> 28/05/2026 &middot;
-      <strong>Versão:</strong> 1.1<br />
+      <strong>Última atualização:</strong> 15/06/2026 &middot;
+      <strong>Versão:</strong> 1.2<br />
       <strong>Aplicação:</strong> MedControl &mdash; aplicativo móvel para Android e iOS
     </p>
 
@@ -201,6 +201,67 @@
     <p><strong>Retenção:</strong> As preferências são eliminadas do dispositivo ao fazer logout ou desinstalar o Aplicativo.</p>
     <p>Você pode desativar as notificações a qualquer momento nas configurações do seu dispositivo ou dentro do Aplicativo.</p>
 
+    <h3>Dados de diagnóstico e monitoramento de desempenho (Sentry)</h3>
+    <p>O Aplicativo utiliza o Sentry &mdash; plataforma terceirizada de monitoramento de erros e desempenho (Sentry, Inc., San Francisco, EUA) &mdash; para detectar e corrigir falhas técnicas de forma proativa. O Sentry opera em segundo plano, de modo transparente, sem qualquer interface visível ao usuário final.</p>
+    <p><strong>Dados enviados ao Sentry:</strong></p>
+
+    <p><strong>a) Dados de identificação técnica:</strong></p>
+    <ul>
+      <li>Identificador de conta (UUID gerado pelo Supabase &mdash; cadeia alfanumérica sem valor de identificação direta fora do sistema, ex.: a1b2c3d4-...)</li>
+      <li>Endereço de e-mail (associado ao evento de erro para que problemas relatados por usuários possam ser localizados nos registros técnicos)</li>
+    </ul>
+
+    <p><strong>b) Dados de erros e falhas (Crash Reporting):</strong></p>
+    <ul>
+      <li>Tipo e mensagem técnica do erro (ex.: &ldquo;TypeError&rdquo;, &ldquo;NetworkError&rdquo;)</li>
+      <li>Stack trace &mdash; sequência de funções do código-fonte executadas antes do erro (referencia arquivos e linhas do código do desenvolvedor, não dados do usuário)</li>
+      <li>Nome do serviço onde ocorreu o erro (ex.: &ldquo;medicamentoService.listar&rdquo;)</li>
+      <li>Trilha de ações realizadas antes do erro (breadcrumbs)</li>
+    </ul>
+
+    <p><strong>c) Dados de desempenho (Performance Monitoring):</strong></p>
+    <ul>
+      <li>Nome técnico e duração em milissegundos de operações instrumentadas</li>
+      <li>Status da operação (sucesso ou erro)</li>
+    </ul>
+    <p>Nota: apenas 20% das operações são amostradas (tracesSampleRate: 0.2); não há transmissão contínua.</p>
+
+    <p><strong>d) Dados técnicos do dispositivo (coletados automaticamente pelo SDK):</strong></p>
+    <ul>
+      <li>Modelo do dispositivo (ex.: Samsung Galaxy A54) e versão do SO</li>
+      <li>Versão do Aplicativo instalada</li>
+      <li>Nível de bateria e memória disponível no momento do evento</li>
+      <li>Tipo de conectividade (Wi-Fi, dados móveis ou sem conexão)</li>
+      <li>Fuso horário e idioma configurados no dispositivo</li>
+    </ul>
+
+    <p><strong>e) Dados de sessão e ambiente:</strong></p>
+    <ul>
+      <li>Timestamp do evento em UTC</li>
+      <li>Duração da sessão até o momento do erro</li>
+      <li>Ambiente (&ldquo;production&rdquo; ou &ldquo;development&rdquo;)</li>
+    </ul>
+
+    <p><strong>Finalidade:</strong></p>
+    <ul>
+      <li>Detectar e corrigir automaticamente falhas e travamentos do Aplicativo</li>
+      <li>Registrar erros de comunicação com o banco de dados (Supabase)</li>
+      <li>Medir o desempenho de operações críticas do sistema</li>
+      <li>Permitir correção de problemas antes que o usuário precise reportar</li>
+    </ul>
+
+    <p><strong>Base Legal (LGPD):</strong></p>
+    <ul>
+      <li>Art. 7º, IX &mdash; Legítimo interesse do controlador: monitoramento de erros e desempenho é necessário para manutenção da qualidade e segurança do serviço</li>
+      <li>Art. 7º, V &mdash; Execução de contrato: o desenvolvedor tem obrigação de manter o Aplicativo funcionando corretamente para os usuários</li>
+    </ul>
+
+    <p><strong>Retenção:</strong> Os dados são retidos por 30 (trinta) dias nos servidores do Sentry (plano Developer gratuito), sendo eliminados automaticamente ao final desse prazo.</p>
+
+    <div class="legal__warning" role="note">
+      <p><strong>IMPORTANTE &mdash; Dado de saúde NÃO enviado:</strong> informações clínicas (nome de medicamentos, número de processo SUS, datas de retorno, histórico de retiradas, observações de saúde) NÃO são transmitidas ao Sentry em nenhuma hipótese. O monitoramento é realizado exclusivamente nos serviços de infraestrutura (banco de dados, rede, autenticação).</p>
+    </div>
+
     <h2 id="secao-4">4. Dados que não coletamos</h2>
     <p>O MedControl <strong>NÃO coleta</strong>:</p>
     <ul>
@@ -210,7 +271,8 @@
       <li>Contatos da agenda do dispositivo &mdash; não acessamos sua lista de contatos</li>
       <li>Dados biométricos &mdash; não utilizamos impressão digital, Face ID ou similares</li>
       <li>Dados de pagamento &mdash; o Aplicativo é gratuito e não realiza cobranças</li>
-      <li>Dados de uso e diagnóstico remotos &mdash; não utilizamos Firebase Analytics, Crashlytics, Sentry ou qualquer serviço de rastreamento de comportamento</li>
+      <li>Dados clínicos nos relatórios de diagnóstico técnico &mdash; informações de saúde (nome de medicamentos, processo SUS, datas de retorno, histórico de retiradas, observações clínicas) nunca são enviadas ao Sentry ou a qualquer outra ferramenta de diagnóstico; veja a Seção 3 para o detalhamento completo do que é e do que não é transmitido ao Sentry</li>
+      <li>Rastreamento comportamental para marketing &mdash; não utilizamos Firebase Analytics, Crashlytics ou quaisquer ferramentas de análise de comportamento do usuário com fins publicitários ou de perfilamento comercial</li>
       <li>Tokens de push notification remotos &mdash; não transmitimos identificadores de dispositivo para servidores de notificação externos</li>
     </ul>
 
@@ -255,6 +317,12 @@
             <td>Nome e e-mail da conta Google (somente no momento do login)</td>
             <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a></td>
           </tr>
+          <tr>
+            <td>Sentry, Inc.</td>
+            <td>Monitoramento de erros e desempenho do Aplicativo (diagnóstico técnico, detecção de falhas, medição de performance). Localização dos servidores: Estados Unidos da América (San Francisco, CA). Certificação: EU-U.S. Data Privacy Framework</td>
+            <td>Identificador de conta (UUID), endereço de e-mail, logs de erros técnicos (stack traces, breadcrumbs), dados técnicos do dispositivo e dados de desempenho (veja Seção 3 &mdash; Dados de Diagnóstico)</td>
+            <td><a href="https://sentry.io/privacy/" target="_blank" rel="noopener noreferrer">sentry.io/privacy</a></td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -270,12 +338,18 @@
     </ul>
 
     <h2 id="secao-7">7. Transferência Internacional de Dados</h2>
-    <p>Os dados armazenados no Supabase são processados em servidores localizados nos Estados Unidos da América. A transferência é realizada com as seguintes garantias, em conformidade com o Art. 33 da LGPD:</p>
+    <p>Dois prestadores de serviço processam dados em servidores localizados nos Estados Unidos da América: Supabase, Inc. e Sentry, Inc. A transferência é realizada com as seguintes garantias, em conformidade com o Art. 33 da LGPD:</p>
+
+    <h3>Supabase, Inc. &mdash; Banco de dados, autenticação e APIs</h3>
+    <p>Adota cláusulas contratuais padrão de proteção de dados e políticas de segurança compatíveis com as melhores práticas do setor. Os dados são protegidos em trânsito (HTTPS/TLS) e em repouso (criptografia).</p>
+    <p>Conformidade e segurança: <a href="https://supabase.com/security" target="_blank" rel="noopener noreferrer">https://supabase.com/security</a></p>
+
+    <h3>Sentry, Inc. &mdash; Monitoramento de erros e desempenho</h3>
+    <p>Certificada sob o EU-U.S. Data Privacy Framework e adota Cláusulas Contratuais Padrão (SCCs) para transferência internacional de dados. Todos os dados são transmitidos via HTTPS (TLS 1.2+).</p>
     <ul>
-      <li>O Supabase adota cláusulas contratuais padrão de proteção de dados e políticas de segurança compatíveis com as melhores práticas do setor</li>
-      <li>Os dados são protegidos em trânsito (HTTPS/TLS) e em repouso (criptografia)</li>
+      <li>DPA: <a href="https://sentry.io/legal/dpa/" target="_blank" rel="noopener noreferrer">https://sentry.io/legal/dpa/</a></li>
+      <li>Política de Privacidade: <a href="https://sentry.io/privacy/" target="_blank" rel="noopener noreferrer">https://sentry.io/privacy/</a></li>
     </ul>
-    <p>Você pode consultar as políticas de segurança e conformidade do Supabase em: <a href="https://supabase.com/security" target="_blank" rel="noopener noreferrer">https://supabase.com/security</a></p>
 
     <h2 id="secao-8">8. Proteção e Segurança dos Dados</h2>
     <p>Adotamos medidas técnicas e organizacionais adequadas para proteger seus dados (Art. 46 da LGPD), incluindo:</p>
@@ -304,6 +378,7 @@
     </ol>
     <p><strong>Prazo de resposta:</strong> Atendemos às solicitações em até 15 (quinze) dias úteis.</p>
     <p><strong>Exclusão de conta no app:</strong> Você pode excluir sua conta e todos os dados associados diretamente pelo Aplicativo, na tela de Ajustes, a qualquer momento, sem necessidade de contato por e-mail.</p>
+    <p><strong>Dados no Sentry:</strong> Ao excluir sua conta, os envios futuros de dados técnicos ao Sentry são imediatamente encerrados. Os dados de diagnóstico já enviados ao Sentry são eliminados automaticamente em até 30 (trinta) dias, conforme a política de retenção da plataforma (plano Developer gratuito).</p>
 
     <h2 id="secao-10">10. Proteção de Menores</h2>
     <p>O Aplicativo é destinado a pessoas maiores de 18 (dezoito) anos ou a menores de idade cujo cadastro e uso seja realizado por pais ou responsáveis legais. O MedControl reconhece que pacientes de qualquer faixa etária podem necessitar de controle de medicamentos de alto custo; nesses casos, o responsável legal deve criar e gerenciar a conta em nome do paciente, nos termos do Art. 14 da LGPD.</p>
@@ -347,7 +422,7 @@
 
     <p class="legal__doc-footer">
       <strong>Política de Privacidade &mdash; MedControl</strong><br />
-      <strong>Versão:</strong> 1.1 | <strong>Última atualização:</strong> 28/05/2026<br />
+      <strong>Versão:</strong> 1.2 | <strong>Última atualização:</strong> 15/06/2026<br />
       <strong>Controlador:</strong> Vinicius Pani<br />
       <strong>Contato:</strong> contato.medcontrol@hotmail.com<br />
       Esta Política está disponível em: <a href="https://medcontrol.com.br/privacidade" target="_blank" rel="noopener noreferrer">https://medcontrol.com.br/privacidade</a>
